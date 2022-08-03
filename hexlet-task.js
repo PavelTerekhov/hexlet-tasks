@@ -529,7 +529,7 @@ function square(numOne) {
     return numOne**2 + numTwo**2
   }
   
-  const squareSumOfSquares = (numOne, numTwo) {
+  const squareSumOfSquares = (numOne, numTwo) => {
     return (numOne ** 2 + numTwo ** 2)**2
   }
   // END
