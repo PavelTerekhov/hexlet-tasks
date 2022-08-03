@@ -358,3 +358,81 @@ function isPrime(num) {
   // END
   
   export default isPrime;
+
+
+// Task 12
+
+// test.js
+// Проверьте с помощью утверждений (asserts) правильность работы функции factorial(), которая вычисляет факториал переданного числа. Факториал числа x — это произведение всех чисел от 1 до x. Например, факториал числа 4 это 1 * 2 * 3 * 4 = 24.
+
+// Подробнее о факториале можно почитать в википедии.
+
+// Саму функцию в этой практике реализовывать не надо, она уже готова. Вам же сейчас надо дописать тесты для проверки её работы.
+
+// Несколько примеров:
+
+// factorial(0); // 1
+// factorial(1); // 1
+// factorial(5); // 120
+// Вам необходимо добавить минимум три дополнительные проверки (помимо уже существующих в модуле), а именно: протестировать пограничные случаи (вызов с параметрами 0 и 1) и сделать проверку на работу с другими неотрицательными целыми числами. Общепринятого факториала от целых отрицательных чисел не существует.
+
+// Подсказки
+// assert(<expression>) проверяет, что результат <expression> является истиной.
+// assert.equal(<actual>, <expected>) проверяет, что <actual> и <expected> равны (проверка на нестрогое равенство ==).
+
+// function.js
+const functions = {
+    right1: function factorial(num) {
+      if (num === 0) {
+        return 1;
+      }
+      return num * factorial(num - 1);
+    },
+  
+    wrong1: function factorial(num) {
+      if (num === 1) {
+        return 1;
+      }
+      return num * factorial(num - 1);
+    },
+  
+    wrong2: function factorial3(num) {
+      if (num === 0) {
+        return 1;
+      } if (num < 4) {
+        return num * factorial3(num - 1);
+      }
+  
+      return num;
+    },
+  
+    wrong3: function factorial4(num) {
+      if (num === 0) {
+        return 1;
+      } if (num === 2) {
+        return 2;
+      } if (num > 1) {
+        return num * factorial4(num - 1);
+      }
+      return 0;
+    },
+  };
+  
+  export default functions[process.env.FUNCTION_VERSION];
+
+  
+// test.js
+import assert from 'assert';
+import factorial from './functions.js';
+
+// Example
+assert.equal(factorial(2), 2);
+assert.equal(factorial(3), 6);
+assert.equal(factorial(0), 1);
+assert.equal(factorial(1), 1);
+assert.equal(factorial(5), 120);
+
+
+// BEGIN (write your solution here)
+
+// END
