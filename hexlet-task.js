@@ -710,3 +710,10 @@ export default (str) => {
 // git config --global user.name "Your Name"
 // git commit -m 'fix hexlet.txt and index.html'
 // git push
+
+// Если файл был удалён, для востановления используются команды для востановления или изменения коммита
+
+// Changes not staged for commit:
+//   (use "git add/rm <file>..." to update what will be committed)
+//   (use "git restore <file>..." to discard changes in working directory)
+//     deleted:    PEOPLE.md
