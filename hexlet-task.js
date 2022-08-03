@@ -18,3 +18,26 @@ export default energy;
 console.info(`Your body energy is ${energy} joules. This is 1 / ${Math.round(576000000000000000000 / energy)} of the yearly world energy consumption. Woah!`);
 
 
+
+// Task 2 
+
+// Реализуйте функцию squareOfSum(), которая принимает на вход два числа и возвращает квадрат суммы этих чисел. Для вычисления значения используйте формулу из курса алгебры: a² + 2 * a * b + b².
+// Примеры использования:
+// squareOfSum(2, 3) // 25
+// squareOfSum(1, 10) // 121
+
+
+// @ts-check
+
+// BEGIN (write your solution here)
+function squareOfSum(numberOne, numberTwo) {
+    return Math.pow(numberOne, 2) + 2 * numberOne * numberTwo + Math.pow(numberTwo, 2) 
+  }
+  // END
+  squareOfSum(2, 3);
+  squareOfSum(1, 10);
+  export default squareOfSum;
+
+
+  
+  
