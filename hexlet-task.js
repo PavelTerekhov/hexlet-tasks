@@ -612,3 +612,55 @@ export const lessThan = (first, second) => (
 
 export const isEqual = (first, second) => (
   compare(first, second) === 0);
+
+
+// Task 16
+
+// addDigits.js
+// Реализуйте и экспортируйте по умолчанию функцию, которая работает следующим образом:
+
+// Дано неотрицательное целое число num. Складывать все входящие в него цифры до тех пор, пока не останется одна цифра.
+
+// Для числа 38 процесс будет выглядеть так:
+
+// 3 + 8 = 11
+// 1 + 1 = 2
+// Результат: 2
+
+// Примеры
+// addDigits(10); // 1
+// addDigits(19); // 1
+// addDigits(38); // 2
+// addDigits(1259); // 8
+// Подсказки
+// Выделите процесс суммирования цифр в числе в отдельную функцию
+// Для преобразования типов используйте функции из урока
+
+// addDigits.js
+import { length } from './strings.js';
+
+// BEGIN (write your solution here)
+function numberSumm(num) {
+
+  num = String(num);
+
+  let sum = 0;
+  for (let i = 0; i < num.length; i++) {
+    sum += +num[i];
+  }
+  if (sum >= 10) {
+    return numberSumm(sum);
+  } else {
+    return sum;
+  }
+}
+
+export default numberSumm;
+
+// END
+
+
+//strings.js
+/* eslint-disable import/prefer-default-export */
+export const length = (str) => str.length;
+
