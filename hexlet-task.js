@@ -436,3 +436,65 @@ assert.equal(factorial(5), 120);
 // BEGIN (write your solution here)
 
 // END
+
+
+
+// Task 13
+
+// myMathModule.js
+// В файле myMathModule.js:
+
+// Создайте функцию getTriangleArea(), которая принимает два аргумента h и b и вычисляет площадь треугольника по формуле A = 1/2 * h * b, где h — высота, а b — основание треугольника.
+
+// Вычисление площади треугольника
+
+// getTriangleArea(5, 10) === 25;
+// getTriangleArea(15, 12) === 90;
+// Экспортируйте функцию.
+
+// solution.js
+// В файле solution.js:
+
+// Импортируйте функцию getTriangleArea() из модуля myMathModule.
+// Создайте функцию, которая принимает аргумент n и возвращает площадь треугольника высотой n и основанием n2/2. Используйте функцию square() (принимает число и возвращает его квадрат).
+// Экспортируйте созданную функцию по умолчанию.
+
+
+// myMathModule.js
+// @ts-check
+
+export const getTrianglePerimeter = (a, b, c) => a + b + c;
+export const getTriangleArea = (h, b) => { return 1 / 2 * h * b; }
+
+
+// BEGIN (write your solution here)
+
+export default getTriangleArea;
+// END
+
+// solution.js
+// @ts-check
+
+import square from './square.js';
+import { getTriangleArea } from './myMathModule.js'; export default (n) => getTriangleArea(n, square(n) / 2);
+
+
+
+// BEGIN (write your solution here)
+
+
+// END
+
+
+// square.js
+// @ts-check
+
+export default (num) => num * num;
+
+// Посмотрите, как здесь работает экспорт по умолчанию: мы не создаем константу для функции,
+// но вместо этого экспортируем безымянную (анонимную) функцию.
+// Это проще и требует меньше кода, но вы не можете использовать эту функцию в этом файле,
+// потому что у функции нет имени, по которому её можно вызвать.
+// Думайте об этом как о товарах "только для экспорта" ;-)
+
+
