@@ -294,3 +294,31 @@ const smallestDivisor = (num) => {
   }
   
   export default smallestDivisor;
+
+// Task 10
+
+// reverse.js
+// Реализуйте функцию reverse(), которая переворачивает строку. Например:
+
+// reverse('hello, world!'); // !dlrow ,olleh
+// Подсказки
+// Для решения этой задачи можно двигаться с конца строки к её началу
+// Длина строки str находится так: str.length
+// Не забудьте, что индексы в строке начинаются с 0, но длина — это реальная длина. Так что индекс последнего символа на единицу меньше длинны строки
+
+// @ts-check
+/* eslint operator-assignment: off */
+
+// BEGIN (write your solution here)
+function reverse(str) {
+    let result = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+      
+      result += str[i];
+    }
+    return result;
+  }
+  // END
+  
+  export default reverse;
+
