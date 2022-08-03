@@ -498,3 +498,44 @@ export default (num) => num * num;
 // Думайте об этом как о товарах "только для экспорта" ;-)
 
 
+// Task 14 
+
+// squares.js
+// Реализуйте функцию square(), которая возвращает квадрат числа.
+// Реализуйте функцию sumOfSquares(), которая возвращает сумму квадратов двух чисел.
+// Реализуйте функцию squareSumOfSquares(), которая возвращает квадрат суммы квадратов двух чисел.
+// Примеры работы функций:
+
+// square(5); // 25
+// square(10); // 100
+// sumOfSquares(5, 10); // 125
+// sumOfSquares(10, -9); // 181
+// squareSumOfSquares(1, 1); // 4
+// squareSumOfSquares(2, 3); // 169
+// Обратите внимание на то, что самостоятельно вызывать их не надо. Это делает проверяющая система в файле __tests__/squares.tests.js
+
+// Подсказки
+// Функция square() может быть использована внутри sumOfSquares()
+// Функция sumOfSquares() может быть использована внутри squareSumOfSquares()
+
+// @ts-check
+
+// BEGIN (write your solution here)
+function square(numOne) {
+    return numOne**2;
+  }
+  
+  function sumOfSquares(numOne, numTwo) {
+    return numOne**2 + numTwo**2
+  }
+  
+  const squareSumOfSquares = (numOne, numTwo) {
+    return (numOne ** 2 + numTwo ** 2)**2
+  }
+  // END
+  
+  export {
+    square,
+    sumOfSquares,
+    squareSumOfSquares,
+  };
