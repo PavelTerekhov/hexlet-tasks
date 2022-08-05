@@ -1,4 +1,4 @@
-https://ru.hexlet.io/courses/intro_to_git/lessons/index/theory_unit - Список русскоязычных локальных it-сообществ
+https://github.com/Hexlet/ru-local-communities - Список русскоязычных локальных it-сообществ
 
 
 
